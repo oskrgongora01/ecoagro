@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoAgro - Conectando Productores y Compradores</title>
+  <!-- Fuentes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Iconos Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Menú de navegación -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="logo">EcoAgro</a>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección principal -->
+  <div class="main-container">
+    <div class="background">
+      <div class="overlay"></div>
+    </div>
+
+    <!-- Formulario y sección informativa -->
+    <div class="content">
+      <!-- Formulario de inicio de sesión -->
+      <div class="login-section">
+        <img src="images/campesino.png" alt="EcoAgro Logo" class="logo">
+        <h1 class="title">Bienvenido a EcoAgro</h1>
+        <p>Conecta directamente con los productores del campo.</p>
+        <form class="login-form">
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Correo Electrónico" required>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Contraseña" required>
+          </div>
+          <button type="submit" class="btn">Iniciar Sesión</button>
+          <p class="link">¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+        </form>
+      </div>
+
+      <!-- Sección informativa -->
+      <div class="info-section">
+        <h2>¿Qué es EcoAgro?</h2>
+        <p>EcoAgro conecta a los agricultores con los compradores directamente. Accede a productos frescos, apoya a la economía local y construye un mundo más sostenible. ¡Únete hoy!</p>
+        <button class="btn-info">Descubre Más</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const togglePassword = document.getElementById("togglePassword");
+    const passwordField = document.getElementById("password");
+  
+    togglePassword.addEventListener("click", () => {
+      // Alternar el tipo de entrada entre 'password' y 'text'
+      const type = passwordField.getAttribute("type") === "password" ? "text" : "password";
+      passwordField.setAttribute("type", type);
+  
+      // Cambiar el ícono entre 'ojo abierto' y 'ojo tachado'
+      togglePassword.classList.toggle("fa-eye");
+      togglePassword.classList.toggle("fa-eye-slash");
+    });
+  </script>
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 EcoAgro. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
